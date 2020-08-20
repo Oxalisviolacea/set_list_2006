@@ -6,8 +6,15 @@ require 'rails_helper'
 
 RSpec.describe 'Songs index page' do
   before :each do
-    @song_1 = Song.create(title: "Call me maybe", length: 384543, play_count: 5454)
-    @song_2 = Song.create(title: "Don't Stop Believin", length: 8435, play_count: 864)
+    @artist_1 = artist = Artist.create(name: 'Prince')
+    @song_1 = Song.create(title: "Purple Rain",
+                          length: 384543,
+                          artist: @artist_1,
+                          play_count: 5454)
+    @song_2 = Song.create(title: "Lets Go Crazy",
+                          length: 8435,
+                          artist: @artist_1,
+                          play_count: 864)
   end
 
   describe 'it in more details' do
