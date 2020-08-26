@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Artist.destroy_all
 Song.destroy_all
+Artist.destroy_all
 rtj = Artist.create!(name: 'Run The Jewels')
 caamp = Artist.create!(name: 'Caamp')
 jgb = Artist.create!(name: 'Jerry Garcia Band')
