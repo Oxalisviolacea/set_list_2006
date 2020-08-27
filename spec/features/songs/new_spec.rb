@@ -14,9 +14,9 @@ RSpec.describe "creating a new song" do
     # With the path:  /artists/:artist_id/songs/new
 
     # Then there is a form to add the Title, Length, and Play_Count of a new song
-    fill_in "Title", with: title
-    fill_in "Length", with: length
-    fill_in "Play count", with: play_count
+    fill_in :title, with: title
+    fill_in :length, with: length
+    fill_in :play_count, with: play_count
 
     click_on "Create Song"
     # And When I fill this form in and click the Create Song button
