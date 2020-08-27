@@ -1,8 +1,5 @@
 require 'rails_helper'
-# As a user,
-# when I visit '/songs'
-# I see each song's title and play count
-#
+
 
 RSpec.describe 'Songs index page' do
   before :each do
