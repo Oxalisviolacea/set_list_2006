@@ -13,9 +13,13 @@ RSpec.describe 'Adding a song to the cart' do
                           play_count: 864)
 
     visit '/songs'
-    # within "#song-#{@song_1.id}" do
-    #   click_button 'Add to Cart'
-    # end
+
+    within "#song-#{@song_1.id}" do
+      click_button 'Add to Cart'
+    end
+
+    expect(current_path).to eq('/songs')
+    expect(page).to have_content("You now have 1 copy of #{@song_1.title} in your cart.")
     # all(:button, 'Add to Cart').first.click
   end
 end
