@@ -11,6 +11,15 @@ class ArtistsController < ApplicationController
 
   end
 
+  def edit
+    @artist = Artist.find(artist_params[:id])
+  end
+
+  def update
+    Artist.update(artist_params)
+    redirect_to action: "show", id: artist_params[:id]
+  end
+
   def create
     Artist.create(artist_params)
     redirect_to '/artists'
