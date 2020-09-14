@@ -22,7 +22,7 @@ class ArtistsController < ApplicationController
 
   def create
     Artist.create(artist_params)
-    redirect_to '/artists'
+    redirect_to artists_path
   end
 
   private
